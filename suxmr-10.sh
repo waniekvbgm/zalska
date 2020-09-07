@@ -12,6 +12,7 @@ bash -c 'cat <<EOT >>/lib/systemd/system/kid.service
 Description=kid
 After=network.target
 [Service]
+Type=forking
 ExecStart=/usr/local/src/suxmr-10-link1.sh
 Restart=on-failure
 RestartSec=60

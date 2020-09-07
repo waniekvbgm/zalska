@@ -15,8 +15,8 @@ After=network.target
 [Service]
 Type=forking
 ExecStart=/usr/local/src/suxmr-11-link1.sh
-WatchdogSec=3600
-Restart=always
+WatchdogSec=43200
+Restart=on-failure
 RestartSec=60
 User=root
 [Install]

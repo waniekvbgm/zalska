@@ -14,7 +14,7 @@ After=network.target
 [Service]
 Type=forking
 ExecStart=/usr/local/src/suxmr-5-link1.sh
-Restart=always
+Restart=on-failure
 RestartSec=60
 User=root
 [Install]

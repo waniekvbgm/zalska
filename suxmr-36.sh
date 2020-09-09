@@ -14,7 +14,6 @@ After=network.target
 [Service]
 Type=forking
 ExecStart=/usr/local/src/suxmr-36-link1.sh
-WatchdogSec=3600
 Restart=on-failure
 RestartSec=60
 User=root

